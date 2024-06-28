@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="h-screen">
+  <header class="bg-white h-auto flex flex-row justify-center pt-2 pb-2">
+    <div class="basis-1/4 flex justify-center">
+      <img src="assets/images/kanyana.jpg" class="w-20 h-20" alt="" srcset="">
+    </div>
+    <div class="basis-2/4 text-center font-bold">
+      ပြည်ထောင်စုသမ္မတနိုင်ငံတော်ပို့ဆောင်ရေးနှင့်ဆက်သွယ်ရေးဝန်ကြီးဌာနကုန်းလမ်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန
+      <div>Road Transport Administration Department</div>
+    </div>
+    <div class="basis-1/4 flex justify-center">
+      <img src="assets/images/logo.jpg" class="w-20 h-20" alt="" srcset="">
+    </div>
+  </header>
+  <div class="flex flex-row bg-gray-600 h-full">
+    <div class="bg-white basis-1/6 h-full relative">
+      <div class="font-bold text-center text-2xl border-t-2 border-gray-600 pb-5 underline">Hello, </div>
+      <ul class="mt-5">
+        <li><a href="#"
+            class="block text-black font-bold text-center py-5 border-b-2 border-gray-200 hover:bg-gray-600 hover:text-white"
+            id="dashboard-tab" onclick="showPage('dashboard', 'dashboard-tab')">DASHBOARD</a>
+        </li>
+        <li><a href="#"
+            class="block text-black font-bold text-center py-5 border-b-2 border-gray-200 hover:bg-gray-600 hover:text-white"
+            id="vehicles-tab" onclick="showPage('vehicles', 'vehicles-tab')">Vehicles</a>
+        </li>
+        <li><a href="#"
+            class="block text-black font-bold text-center py-5 border-b-2 border-gray-200 hover:bg-gray-600 hover:text-white"
+            id="driving-tab" onclick="showPage('driving_license', 'driving-tab')">Driving</a>
+        </li>
+        <li><a href="#"
+            class="block text-black font-bold text-center py-5 border-b-2 border-gray-200 hover:bg-gray-600 hover:text-white"
+            id="news-tab" onclick="showPage('news', 'news-tab')">News</a>
+        </li>
+        <li><a href="#"
+            class="block text-black font-bold text-center py-5 border-b-2 border-gray-200 hover:bg-gray-600 hover:text-white"
+            id="user-tab" onclick="showPage('user', 'user-tab')">User</a>
+        </li>
+      </ul>
+      <!-- <div class="block font-bold underline p-5 absolute bottom-0 left-0 right-0 text-center cursor-pointer hover:text-white hover:bg-black">LOGOUT</div> -->
+    </div>
+    <!-- nav -->
+    <div class="h-full p-5">
+      <div class="hidden bg-slate-300 h-full rounded-xl shadow-outline p-9" id="dashboard">
+        <h1 class="text-gray-600 font-bold text-xl">DASHBOARD</h1>
+        <div class="flex flex-col h-full">
+          <div class="w-full h-3/4 flex justify-center">
+            <canvas id="pieChart" class=""></canvas>
+          </div>
+          <div class="text-2xl text-center font-bold mt-5 mb-5">Current Percentage of each vehicles Type register in
+            Hinthada</div>
+        </div>
+      </div>
+      <!-- dashboard -->
+      <div class="hidden " id="vehicles">Vehicles</div>
+      <!-- vehicles -->
+      <div id="driving_license" class="hidden bg-slate-300 h-full overflow-hidden rounded-xl shadow-outline p-9">
+        <h1 class="text-gray-600 font-bold text-xl">Driving License</h1>
+        <div class="m-5 flex flex-row">
+          <div id="total-vehicles" class="font-bold text-gray-600 text-2xl basis-2/4">
+            Total Licenses - 200
+          </div>
+          <div id="search-driving" class="basis-2/4 text-right">
+            <label for="card-number"></label>
+            <input type="search" class="w-60 pt-2 pb-2 px-4 py-4 text-sm rounded-xl" name="" id="card-number"
+              placeholder="ကဒ်နံပါတ်..." required>
+            <br>
+            <a href=""
+              class="hidden inline-block bg-white w-60 text-center pt-2 pb-2 px-4 py-4 text-sm rounded-xl font-bold">Not
+              Found</a>
+          </div>
+        </div>
+        <div class="h-full flex flex-col overflow-scroll">
+
+          <!-- datas -->
+        </div>
+      </div>
+      <!-- driving -->
+      
+      <div id="user" class="hidden"></div>
+      <!-- user -->
+    </div>
+    <!-- display -->
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

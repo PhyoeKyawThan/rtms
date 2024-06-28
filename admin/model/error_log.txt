@@ -1,0 +1,8 @@
+Wednesday 15th of May 2024 07:15:09 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+Wednesday 15th of May 2024 07:15:14 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+Wednesday 15th of May 2024 07:15:41 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+Monday 3rd of June 2024 03:10:02 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC id' at line 1
+Monday 3rd of June 2024 03:10:49 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1
+Monday 3rd of June 2024 03:10:59 AM: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1
+Sunday 9th of June 2024 05:15:50 AM: No data supplied for parameters in prepared statement
+Sunday 9th of June 2024 05:17:01 AM: No data supplied for parameters in prepared statement

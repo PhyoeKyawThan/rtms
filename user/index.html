@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    * {
+      width: 100%;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .home-background {
+      background-image: url('/public/assets/images/car_.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .footer-background {
+      background-image: url('/public/assets/images/wallpaperflare.com_wallpaper.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header class="bg-white h-auto flex flex-row justify-center pt-2 pb-2 border-b shadow-xl">
+    <div class="basis-1/4 flex justify-center">
+      <img src="/public/assets/images/kanyana.jpg" class="w-10 h-10 md:w-20 md:h-20" alt="" srcset="">
+    </div>
+    <div class="basis-2/4 text-center font-bold text-xs pt-2 pb-2 md:text-md" >
+      ပြည်ထောင်စုသမ္မတနိုင်ငံတော်ပို့ဆောင်ရေးနှင့်ဆက်သွယ်ရေးဝန်ကြီးဌာနကုန်းလမ်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန
+      <div>Road Transport Administration Department</div>
+    </div>
+    <div class="basis-1/4 flex justify-center">
+      <img src="/public/assets/images/logo.jpg" class="w-10 h-10 md:w-20 md:h-20" alt="" srcset="">
+    </div>
+  </header>
+  <!-- header -->
+  <nav class="bg-sky-600 text-center">
+    <button class="block md:hidden p-5" onclick="openNav()">
+      <svg class="w-6 h-6 text-gray-800 font-bold text-lg hover:bg-sky-200 ml-2" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <!-- nav button -->
+    <ul class="hidden md:flex md:flex-row md:space-x-1 md:w-3/5 m-auto" id="nav-items">
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 md:text-sm md:w-auto"
+        id="home-tab" onclick="openPage('home')">ပင်မစာမျက်နှာ</li>
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer z-40 md:hover:bg-slate-300 md:text-sm md:w-auto"
+        onclick="openSubNav('vehicle_license_sub')">
+        ယာဉ်လိုင်စင်
+        <ul class="w-8/9 bg-sky-200 m-auto hidden md:absolute md:w-fit md:bg-sky-600" id="vehicle_license_sub">
+          <li class="p-2 text-slate-400 text-xs pt-2 pb-2 hover:bg-sky-800 hover:text-slate-200 md:text-slate-200"
+            id="vehicle_license_requirement-tab" onclick="showPage('vehicle_license_requirement')">Requirements</li>
+          <li class="p-2 text-slate-400 text-xs pt-2 pb-2 hover:bg-sky-800 hover:text-slate-200 md:text-slate-200"
+            id="check_vehicle-tab" onclick="showPage('check_vehicle')">ယာဉ်လိုင်စင်သက်တမ်းစစ်ဆေးရန် </li>
+        </ul>
+      </li>
+      <!-- vehicles -->
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 md:text-sm md:w-auto"
+        id="news-tab" onclick="showPage('news')">သတင်းများ</li>
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 z-40 md:text-sm md:w-auto"
+        id="driving-tab" onclick="openSubNav('driving_sub')">
+        ယာဉ်မောင်းလိုင်စင်
+        <ul class="w-8/9 bg-sky-200 m-auto hidden md:absolute md:w-fit md:bg-sky-600" id="driving_sub">
+          <li class="p-2 text-slate-400 text-xs pt-2 pb-2 hover:bg-sky-800 hover:text-slate-200 md:text-slate-200"
+            id="driving_register-tab" onclick="showPage('driving_register')">
+            စာရင်းသွင်းရန်
+          </li>
+          <li class="p-2 text-slate-400 text-xs pt-2 pb-2 hover:bg-sky-800 hover:text-slate-200 md:text-slate-200"
+            id="check_vehicle-tab" onclick="showPage('drivngcheck_vehicle')">
+            ကဒ်နံပါတ်စစ်ဆေးရန်
+          </li>
+          <li class="p-2 text-slate-400 text-xs pt-2 pb-2 hover:bg-sky-800 hover:text-slate-200 md:text-slate-200"
+            id="driving_change_cost-tab" onclick="showPage('drivng_change_cost')">
+            ကဒ်လဲရန်အဖိုးအခ
+          </li>
+        </ul>
+
+      </li>
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 md:text-sm md:w-auto"
+        id="reviews-tab" onclick="showPage('reviews')">Reviews</li>
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 md:text-sm md:w-auto"
+        id="qa-tab" onclick="showPage('qa')">Q & A</li>
+      <li class="md:p-5 p-2 font-bold text-slate-200 cursor-pointer md:hover:bg-slate-300 md:text-sm md:w-auto"
+        id="profile-tab" onclick="showPage('profile')">Profile</li>
+    </ul>
+    <!-- nav-items -->
+  </nav>
+  <!-- nav -->
+   
+  <div id="home" class="h-full">
+    <div class=" home-background">
+      <div class="p-10 text-3xl backdrop-blur-sm backdrop-brightness-150">
+        <h1 class="leading-loose max-w-96 text-sky-100">
+          ပြည်ထောင်စုသမ္မတနိုင်ငံတော်ပို့ဆောင်ရေးနှင့်ဆက်သွယ်ရေးဝန်ကြီးဌာနကုန်းလမ်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန
+        </h1>
+      </div>
+    </div>
+    <!-- home main poster -->
+    <div class="ambious p-5 bg-slate-100">
+      <h1 class="text-2xl font-bold text-center underline text-green-600">ရည်မှန်းချက်</h1>
+      <p class="block m-auto mt-5">
+      <ul class="md:w-2/3 w-full m-auto">
+        <li class="p-2">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta nostrum a inventore
+          unde, officiis
+          eaque, corporis eos, esse illo expedita cumque explicabo ullam! Magni, sunt? Nisi itaque molestias beatae!
+        </li>
+        <li class="p-2">2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ducimus tempore, eius
+          autem doloribus
+          necessitatibus! Alias neque doloribus consectetur blanditiis earum nesciunt, tempore laborum nisi ipsam atque
+          minima, hic nulla?</li>
+      </ul>
+      </p>
+    </div>
+    <!-- ရည်မှန်းချက် -->
+    <div id="lastet-news" class="bg-slate-100 md:h-full w-9/10 border-t p-5">
+      <h1 class="text-2xl font-bold text-slate-600 mb-2">နောက်ဆုံးရသတင်းများ</h1>
+      <div id="news" class="md:flex md:flex-row md:flex-wrap justify-center">
+        <div id="new" class="md:w-1/4 md:m-5 mb-9 h-96 border shadow-md">
+          <div id="news-image" class="h-3/4">
+            <img src="/assets/images/kanyana.jpg" class="h-full" alt="">
+          </div>
+          <div id="title" class="font-bold text-md p-2 max-h-20 overflow-scroll">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nulla debitis aliquam impedit minus eaque, consectetur numquam? Dolores quis officia
+            eveniet eius at, provident ducimus doloribus, repudiandae deleniti, veritatis cupiditate necessitatibus!
+          </div>
+          <div id="date"
+            class="font-bold text-slate-400 text-xs p-2 bg-slate-200 flex flex-row space-x-2 justify-center shadow-xl">
+            <div class="w-1/2">Published Date - 2024-02-01</div>
+            <div class="w-1/2 bg-sky-600 p-2 text-center text-slate-200 rounded-md hover:bg-sky-300 cursor-pointer">See
+              More</div>
+          </div>
+        </div>
+        <!-- new -->
+        <div id="new" class="md:w-1/4 md:m-5 mb-9 h-96 border shadow-md">
+          <div id="news-image" class="h-3/4">
+            <img src="/assets/images/kanyana.jpg" class="h-full" alt="">
+          </div>
+          <div id="title" class="font-bold text-md p-2 max-h-20 overflow-scroll">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nulla debitis aliquam impedit minus eaque, consectetur numquam? Dolores quis officia
+            eveniet eius at, provident ducimus doloribus, repudiandae deleniti, veritatis cupiditate necessitatibus!
+          </div>
+          <div id="date"
+            class="font-bold text-slate-400 text-xs p-2 bg-slate-200 flex flex-row space-x-2 justify-center shadow-xl">
+            <div class="w-1/2">Published Date - 2024-02-01</div>
+            <div class="w-1/2 bg-sky-600 p-2 text-center text-slate-200 rounded-md hover:bg-sky-300 cursor-pointer">See
+              More</div>
+          </div>
+        </div>
+  
+        <div id="new" class="md:w-1/4 md:m-5 mb-9 h-96 border shadow-md">
+          <div id="news-image" class="h-3/4">
+            <img src="/assets/images/kanyana.jpg" class="h-full" alt="">
+          </div>
+          <div id="title" class="font-bold text-md p-2 max-h-20 overflow-scroll">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nulla debitis aliquam impedit minus eaque, consectetur numquam? Dolores quis officia
+            eveniet eius at, provident ducimus doloribus, repudiandae deleniti, veritatis cupiditate necessitatibus!
+          </div>
+          <div id="date"
+            class="font-bold text-slate-400 text-xs p-2 bg-slate-200 flex flex-row space-x-2 justify-center shadow-xl">
+            <div class="w-1/2">Published Date - 2024-02-01</div>
+            <div class="w-1/2 bg-sky-600 p-2 text-center text-slate-200 rounded-md hover:bg-sky-300 cursor-pointer">See
+              More</div>
+          </div>
+        </div>
+      </div>
+      <!-- news -->
+    </div>
+    <!-- lastest news -->
+  
+
+  <footer class="p-5">
+    <a href="/contact_us">
+      <div class="h-40 footer-background flex justify-center aligns-center" id="contact">
+        <h1 class="backdrop-blur-sm text-center text-3xl font-bold text-slate-400 p-10 hover:backdrop-blur-xl hover:text-4xl cursor-pointer transition ease-in-out delay-150">Contact Us</h1>
+      </div>
+    </a>
+    <div id="copy-right" class="text-center text-slate-400 bg-slate-200 ">copyright@2024</div>
+  </footer>
+  <!-- contact -->
+  </div>
+  <!-- home -->
+  <script src="/public/assets/js/index.js"></script>
+  <script src="/public/assets/js/control_pages.js"></script>
+</body>
+
+</html>

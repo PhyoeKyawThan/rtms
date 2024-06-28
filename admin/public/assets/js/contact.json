@@ -1,0 +1,11 @@
+{
+    "address": "New York",
+    "email": [
+        "new_email@example.com",
+        "some@gmail.com"
+    ],
+    "phone": [
+        "1234567890"
+    ],
+    "map": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d7583.481311547948!2d95.46097807349948!3d17.63922751817408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c0c1726f56f867%3A0xbf4abfd7f8d572df!2z4YCA4YCv4YCU4YC64YC44YCc4YCZ4YC64YC44YCV4YCt4YCv4YC34YCG4YCx4YCs4YCE4YC64YCb4YCx4YC44YCK4YC94YC-4YCU4YC64YCA4YC84YCs4YC44YCZ4YC-4YCv4YCl4YCu4YC44YCF4YCu4YC44YCM4YCs4YCU!5e0!3m2!1smy!2smm!4v1718891760494!5m2!1smy!2smm"
+}

@@ -1,0 +1,6 @@
+Saturday 8th of June 2024 02:53:11 AM: Field 'phone' doesn't have a default value
+Saturday 8th of June 2024 02:54:54 AM: Field 'phone' doesn't have a default value
+Saturday 8th of June 2024 03:00:43 AM: Field 'phone' doesn't have a default value
+Saturday 8th of June 2024 03:03:06 AM: Field 'phone' doesn't have a default value
+Thursday 27th of June 2024 05:38:55 PM: Access denied for user 'root'@'localhost'
+Thursday 27th of June 2024 05:39:11 PM: Access denied for user 'root'@'localhost'
