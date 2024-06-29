@@ -2,11 +2,7 @@
 include (__DIR__ . "/../../includes/news/get_all_news.php");
 ?>
 <div id="home" class="h-full overflow-scroll">
-<<<<<<< HEAD
-  <div class=" home-background">
-=======
   <div class=" home-background h-3/5">
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     <div class="p-10 text-3xl">
       <h1 class="leading-loose max-w-96 text-sky-100">
         ပြည်ထောင်စုသမ္မတနိုင်ငံတော်ပို့ဆောင်ရေးနှင့်ဆက်သွယ်ရေးဝန်ကြီးဌာနကုန်းလမ်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန
@@ -62,11 +58,7 @@ include (__DIR__ . "/../../includes/news/get_all_news.php");
             class="font-bold text-slate-400 text-xs p-2 bg-slate-200 flex flex-row space-x-2 justify-center shadow-xl">
             <div class="w-1/2">Published Date - <?php echo $all_news[$i]["date"] ?></div>
             <a class="block w-1/2 bg-sky-600 p-2 text-center text-slate-200 rounded-md hover:bg-sky-300 cursor-pointer"
-<<<<<<< HEAD
-              href="/home?p=news&news_id=<?php echo $all_news[$i]["news_id"] ?>">
-=======
               href="/home?p=news&news_id=<?php echo $all_news[$i]["news_id"] ?>" onclick="showNews()">
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
               See
               More</a>
           </div>

@@ -5,12 +5,8 @@ function openNav() {
         nav_items.classList.add("hidden"));
 }
 
-<<<<<<< HEAD
-function openSubNav(sub_nav_id) {
-=======
 function openSubNav(sub_nav_id, sub_parent) {
     localStorage.setItem("sub_parent", sub_parent);
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     const sub_nav = document.getElementById(sub_nav_id);
     const navs = [
         "vehicle_license_sub",
@@ -35,13 +31,10 @@ function openSubNav(sub_nav_id, sub_parent) {
 //     })
     
 // }
-<<<<<<< HEAD
-=======
 // function showNews(){
 //     document.getElementById(localStorage.getItem("sub_parent")).classList.remove("bg-black");
 //     document.getElementById(localStorage.getItem("sub_parent")).classList.remove("text-white");
 // }
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 
 function closeResult(result_id) {
     document.getElementById(result_id).classList.add("hidden");

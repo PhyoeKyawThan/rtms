@@ -6,10 +6,6 @@ if (page_id == null) {
     showPage(page_id);
 }
 
-<<<<<<< HEAD
-const news_id = urlParams.get('news_id');
-if(news_id){
-=======
 if (localStorage.getItem("sub_parent")) {
     document.getElementById(localStorage.getItem("sub_parent")).classList.add("bg-black");
     document.getElementById(localStorage.getItem("sub_parent")).classList.add("text-white");
@@ -17,7 +13,6 @@ if (localStorage.getItem("sub_parent")) {
 
 const news_id = urlParams.get('news_id');
 if (news_id) {
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     document.getElementById("news-details").classList.remove("hidden");
     document.getElementById("news").classList.add("hidden");
 }
@@ -45,11 +40,6 @@ function showPage(display_id) {
         "p4",
         "history"
     ];
-<<<<<<< HEAD
-
-    if(display_id === "profile"){
-        if(document.getElementById("profile-tab").innerText === "Login"){
-=======
     const main_tabs = [
         "home",
         "news",
@@ -58,18 +48,21 @@ function showPage(display_id) {
         "history"
     ];
     main_tabs.forEach(tab => {
-        if (tab === display_id) {
-            if (localStorage.getItem("sub_parent")) {
-                document.getElementById(localStorage.getItem("sub_parent")).classList.remove("bg-black");
-                document.getElementById(localStorage.getItem("sub_parent")).classList.remove("text-white");
+        if(display_id === tab ){
+            const sub_parents = [
+                "sub_parent1",
+                "driving-tab"
+            ];
+            sub_parents.forEach( tab => {
+                document.getElementById(tab).classList.contains("bg-black") && document.getElementById(tab).classList.remove("bg-black");
+                document.getElementById(tab).classList.contains("text-white") && document.getElementById(tab).classList.remove("text-white");
                 localStorage.removeItem("sub_parent");
-            }
+            });
         }
     })
 
     if (display_id === "profile") {
         if (document.getElementById("profile-tab").innerText === "Login") {
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             window.location.href = "/login";
         }
     }
@@ -84,13 +77,8 @@ function showPage(display_id) {
             element.classList.remove("hidden");
             tab.classList.add("bg-black");
             console.log(tab.childNodes[0].nodeType)
-<<<<<<< HEAD
-            const sub_tab= document.querySelector(`#${tab.id} a`);
-            if(sub_tab){
-=======
             const sub_tab = document.querySelector(`#${tab.id} a`);
             if (sub_tab) {
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                 console.log(sub_tab);
                 !sub_tab.classList.contains("text-white") && sub_tab.classList.add("text-white");
             }
@@ -98,11 +86,8 @@ function showPage(display_id) {
         } else {
             element.classList.add("hidden");
             tab.classList.remove("bg-black");
-<<<<<<< HEAD
-            
-=======
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             tab.classList.contains("text-white") && tab.classList.remove("text-white");
+            !tab.classList.contains("text-black") && tab.classList.add("text-black");
         }
     });
 

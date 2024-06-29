@@ -7,8 +7,6 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
         echo $_GET["success"];
     }
     include(__DIR__."/../../includes/vehicles/delete_after_five_year.php");
-<<<<<<< HEAD
-=======
     if(isset($_GET["year"])){
         $query = "SELECT * FROM vehicle_license WHERE YEAR(register_date)='".$_GET["year"]."'";
         $result = $connect->query($query);
@@ -17,7 +15,6 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
             $vehicles[] = $row;
         }
     }
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     ?>
 </div>
 <div id="vehicles" class="hidden bg-slate-300 h-full overflow-scroll rounded-xl shadow-outline p-9 box-border">
@@ -27,8 +24,6 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
             <button class="underline text-md font-bold text-slate-800 cursor-pointer" id="expired_vehicles-tab" onclick="showPage('expired_vehicles', 'expired_vehicles-tab')">Expired Vehicles</button>
         </div>
     </div>
-<<<<<<< HEAD
-=======
     <div>
         <h1 class="text-2xl font-bold text-center mb-2">Current Year - <?php echo isset($_GET["year"]) ? $_GET["year"] : "All" ?></h1>
         <select name="" id="year" class="p-2 rounded-md block m-auto text-md font-bold">
@@ -43,7 +38,6 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
         ?>
         </select>
     </div>
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     <div class="flex flex-row space-x-4 m-2 justify-center" id="vehicle-tabs">
         <button type="button" class="pt-2 pb-2 pl-4 pr-4 text-white font-bold rounded-xl hover:bg-sky-800"><a href="/home?p=vehicles">All</a></button>
         <button type="button" class="pt-2 pb-2 pl-4 pr-4 text-white font-bold rounded-xl hover:bg-sky-800"
@@ -145,9 +139,6 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
             <?php } ?>
         </tbody>
     </table>
-<<<<<<< HEAD
-</div>
-=======
 </div>
 <script>
     const year = document.getElementById("year");
@@ -155,4 +146,3 @@ include (__DIR__ . "/../../includes/vehicles/get_all_vehicles.php");
         window.location.href = "/home?p=vehicles&year=" + year.value;
     })
 </script>
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)

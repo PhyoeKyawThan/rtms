@@ -32,10 +32,7 @@ include (__DIR__ . "/../../includes/driving/get_all_driving_license.php");
                 <th class="text-white p-5">လိုင်စဉ်</th>
                 <th class="text-white p-5">မှတ်ပုံတင်အမှတ်</th>
                 <th class="text-white p-5">အဖအမည်</th>
-<<<<<<< HEAD
-=======
                 <th class="text-white p-5">နေရပ်လိပ်စာ</th>
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                 <th class="text-white p-5">ကဒ်နံပါတ်</th>
                 <th class="text-white p-5">ကုန်ဆုံးရက်</th>
                 <th class="text-white p-5">OPTIONS</th>
@@ -52,10 +49,7 @@ include (__DIR__ . "/../../includes/driving/get_all_driving_license.php");
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["license"] ?></td>
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["nrc"] ?></td>
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["father_name"] ?></td>
-<<<<<<< HEAD
-=======
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["address"] ?></td>
->>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["card_number"] ?></td>
                     <td class="font-bold text-center border-2 border-slate-400"><?php echo $driving["exp_date"] ?></td>
                     <td class="font-bold text-center border-2 border-slate-400 flex justify-center">
