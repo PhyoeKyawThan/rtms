@@ -137,7 +137,7 @@ $db = new DB();
         </div>
     </header>
     <!-- header -->
-    <nav class="nav text-center sticky top-0 z-50">
+    <nav class="nav text-center sticky top-0 z-50 m-auto" style="">
         <button class="block md:hidden p-5" onclick="openNav()">
             <svg class="w-6 h-6 text-gray-800 font-bold text-lg hover:bg-sky-200 ml-2" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +160,14 @@ $db = new DB();
                         id="check_vehicle-tab"><a href="/home?p=check_vehicle" class="block text-left">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန် </a></li>
 =======
                 id="sub_parent1" onclick="openSubNav('vehicle_license_sub', 'sub_parent1')">
-                မော်တော်ယာဉ်မှတ်ပုံတင်ခြင်း
+                <span class="flex">
+                    မော်တော်ယာဉ်မှတ်ပုံတင်ခြင်း <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
                 <ul class="w-8/9 bg-sky-200 m-auto hidden md:absolute md:top-14 md:w-fit md:bg-sky-600"
                     id="vehicle_license_sub">
                     <li class="p-2 bg-yellow-100  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
@@ -195,8 +202,19 @@ $db = new DB();
             </li>
             <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer md:hover:bg-black hover:text-white z-40 md:text-sm md:w-auto"
                 id="driving-tab" onclick="openSubNav('driving_sub', 'driving-tab')">
+<<<<<<< HEAD
 >>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                 ယာဉ်မောင်းလိုင်စင်
+=======
+                <span class="flex">
+                    ယာဉ်မောင်းလိုင်စင် <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+>>>>>>> 15b8ac6 ([ add ] get the manual page with responsive)
                 <ul class="w-8/9 bg-sky-200 m-auto hidden absolute-top md:w-fit md:bg-sky-600" id="driving_sub">
                     <li class="p-2 bg-yellow-100 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="driving_register-tab">
