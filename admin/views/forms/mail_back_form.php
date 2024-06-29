@@ -33,7 +33,11 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
         <div>
+<<<<<<< HEAD
             <a href="/home?p=user-contact">Back</a>
+=======
+            <a href="/home?p=user-contact" class="underline font-bold">Back</a>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         </div>
         <h2 class="text-2xl font-bold mb-6 text-gray-800">Reply to Contact</h2>
         <form id="reply-form" action="/action/mail_back" method="POST" class="space-y-4" onsubmit="handleFormSubmit(event)">
@@ -61,7 +65,11 @@
                 <input type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" value="Send Reply" id="submit-btn">
             </div>
         </form>
+<<<<<<< HEAD
         <div id="spinner" class="spinner absolute inset-0 flex items-center justify-center"></div>
+=======
+        <div id="spinner" class="hidden spinner absolute inset-0 flex items-center justify-center"></div>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     </div>
     <script>
         function handleFormSubmit(event) {
@@ -75,12 +83,20 @@
             const submit_btn =document.getElementById("submit-btn");
 
             // Show the spinner
+<<<<<<< HEAD
             spinner.style.display = 'flex';
+=======
+            spinner.classList.remove("hidden");
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             submit_btn.disabled = true;
             xhr.open('POST', form.action, true);
             xhr.onload = function () {
                 // Hide the spinner
+<<<<<<< HEAD
                 spinner.style.display = 'none';
+=======
+                spinner.classList.add("hidden");
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 
                 if (xhr.status === 200) {
                     form.reset(); // Reset the form fields

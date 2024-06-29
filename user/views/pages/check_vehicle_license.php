@@ -25,12 +25,21 @@
 </style>
 
    
+<<<<<<< HEAD
 <div id="check_vehicle" class="p-5 h-full">
     <video autoplay loop muted plays-inline class="back-video">
         <source src="/assets/images/highway-loop.mp4" type="video/mp4">
     </video>
     <h1 class=" h1-color text-center font-bold text-2xl">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန်</h1><br>
     <div class="md:w-3/5 text-center">
+=======
+<div id="check_vehicle" class="p-5">
+    <video autoplay loop muted plays-inline class="back-video" class="h-full">
+        <source src="/assets/images/highway-loop.mp4" type="video/mp4">
+    </video>
+    <h1 class=" h1-color text-center font-bold text-2xl">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန်</h1><br>
+    <div class="md:w-3/5 m-auto">
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         <label class="text-white">သင်၏မော်တော်ယာဉ်လိုင်စင်နံပါတ်အားပြည့်စုံမှန်ကန်စွာရိုက်ထည့်ပါ။</label>
         <input type="text" name="" id="vehicle-license" class="w-1/4 p-2 bg-sky-100 rounded-md" placeholder="eg - ၄၁ယ/၁၂၃၄၅">
         <input type="button" value="စစ်ဆေးရန်" onclick="getData()" class="w-fit rounded-xl p-2 bg-sky-600 font-bold text-white text-md">

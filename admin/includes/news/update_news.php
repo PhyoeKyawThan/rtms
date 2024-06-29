@@ -1,7 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION["current_admin"])) {
+<<<<<<< HEAD
     header("Location: login_view.php");
+=======
+    header("Location: /login");
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 }
 
 $admin_id = $_SESSION["current_admin"]["admin_id"];
@@ -20,8 +24,18 @@ if ($db->is_connected()) {
             "admin_id"=>$admin_id,
             "title"=>$_POST["title"],
             "content"=>$_POST["content"],
+<<<<<<< HEAD
             // "image"=>uploadImage($_POST["file"])
     );
+=======
+    );
+    // echo isset($_FILES["file"]["error"]);
+    if($_FILES["file"]["size"] > 0){
+        $datas["image"] = uploadFile($_FILES["file"], "images");
+    }
+    // print_r($datas);
+    // exit;
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     $is_update = $db->update("news", $datas, array("news_id" => $_GET["news_id"]));
     $db->close();
     // return json formatted datas

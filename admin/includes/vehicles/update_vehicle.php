@@ -24,7 +24,12 @@ if ($db->is_connected()) {
         "vehicle_weight" => $_POST["vehicle-weight"],
         "vehicle_load" => $_POST["vehicle-load"],
         "color" => $_POST["color"],
+<<<<<<< HEAD
         "exp_date" => $_POST["exp-date"]
+=======
+        "exp_date" => $_POST["exp-date"],
+        "register_date" => $_POST["register-date"],
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     );
     $is_inserted = $db->update("vehicle_license", $datas, array("id" => $_GET["id"]));
     $db->close();

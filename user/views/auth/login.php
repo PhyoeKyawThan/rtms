@@ -21,6 +21,10 @@
         <div class="mb-5">
           <img src="../public/assets/images/logo.jpg" alt="" class="block m-auto w-20">
         </div>
+<<<<<<< HEAD
+=======
+        <a href="/home?p=home" class="underline font-bold">Back</a>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         <h1 class="text-2xl font-bold mb-5 mt-5 text-center">Sign In to your Account</h1>
         <?php
           if(isset($_GET["error"])){

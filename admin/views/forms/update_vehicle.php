@@ -94,6 +94,16 @@ $data = get_data($_GET["id"]);
                     $date = new DateTime($data['exp_date']);
                     echo $date->format('Y-m-d') ?>" id="exp-date">
             </div>
+<<<<<<< HEAD
+=======
+            <div class="mb-2">
+                <label class="block font-bold" for="register-date">Register Date *</label>
+                <input type="date" class="border mt-3 border-slate-300 rounded-xl p-2 ml-5 w-full" name="register-date"
+                    value="<?php
+                    $date = new DateTime($data['register_date']);
+                    echo $date->format('Y-m-d') ?>" id="register-date">
+            </div>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             <div class="flex justify-end space-x-5">
                 <div>
                     <a href="../includes/delete.php?id=<?php echo $data['id'] ?>&name=vehicle_license">

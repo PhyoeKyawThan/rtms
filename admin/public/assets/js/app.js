@@ -73,6 +73,10 @@ function get_rate(type_count, all_count) {
     return (Number(type_count) / Number(all_count)) * 100;
 }
 let rate = [];
+<<<<<<< HEAD
+=======
+let count_s = [];
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 async function get_vehicle_count() {
     try {
         const response = await fetch("/get_count");
@@ -85,6 +89,10 @@ async function get_vehicle_count() {
             Object.keys(counts).forEach(type => {
                 labels.push(`${type} - ${get_rate(counts[type], all_count)}%`);
                 rate.push(get_rate(counts[type], all_count))
+<<<<<<< HEAD
+=======
+                count_s.push(counts[type]);
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                 datas.push(counts[type]);
             })
             const data = {
@@ -112,9 +120,20 @@ async function get_vehicle_count() {
 async function get_datas() {
     const datas = await get_vehicle_count();
     let index = 0;
+<<<<<<< HEAD
     document.querySelectorAll(".percentage").forEach(percentage => {
         percentage.innerText = rate[index] + "%";
         index++;
+=======
+    document.querySelectorAll("#percentage").forEach(percentage => {
+        percentage.innerText = rate[index] + "%";
+        index++;
+    });
+    index = 0;
+    document.querySelectorAll("#count").forEach( count => {
+        count.innerText = count_s[index];
+        index++;
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     })
     const data = {
         labels: datas.labels,

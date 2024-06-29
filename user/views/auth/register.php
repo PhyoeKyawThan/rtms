@@ -31,6 +31,10 @@
         <div class="mb-5">
           <!-- <img src="/assets/images/logo.jpg" alt="" class="block m-auto w-20"> -->
         </div>
+<<<<<<< HEAD
+=======
+        <a href="/home?p=home" class="underline font-bold">Back</a>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         <h1 class="text-2xl font-bold mb-5 mt-5 text-center">Register Here</h1>
         <?php
         if (isset($_GET["error"])) {
@@ -49,9 +53,16 @@
         <input type="text" name="phone" id="phone" placeholder="eg - 09884433"
           class="pl-2 pr-2 w-full border rounded-md" required>
 
+<<<<<<< HEAD
         <label for="vehicle-license" class="block font-bold mb-2 mt-2 text-slate-400">Your Vehicle License Number * </label>
         <input type="text" name="vehicle-license" id="vehicle-license" placeholder="eg - ABC1234 " class="pl-2 pr-2 w-full border rounded-md"
           required>
+=======
+        <label for="vehicle-license" class="block font-bold mb-2 mt-2 text-slate-400">Your Vehicle License Number *
+        </label>
+        <input type="text" name="vehicle-license" id="vehicle-license" placeholder="eg - ABC1234 "
+          class="pl-2 pr-2 w-full border rounded-md" required>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 
 
         <label for="birth-date" class="block font-bold mb-2 mt-2 text-slate-400">Date Of Birth *</label>
@@ -62,7 +73,11 @@
           class="pl-2 pr-2 w-full border rounded-md m-auto">
         <!-- <a href="" class="block mt-4 mb-4 text-indigo-800 text-right hover:text-indigo-400">Forgot Password?</a> -->
         <input type="submit" value="Register" name="submit"
+<<<<<<< HEAD
           class="border pt-2 pb-2 mt-2 w-full rounded-xl bg-indigo-700 hover:bg-indigo-400 cursor-pointer text-white font-bold">
+=======
+          class="border pt-2 pb-2 mt-2 w-2/4 m-auto block rounded-xl bg-indigo-700 hover:bg-indigo-400 cursor-pointer text-white font-bold">
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         <a href="/login" class="block mt-4 mb-4 text-indigo-800 text-center hover:text-indigo-400">Already have
           account?</a>
       </form>

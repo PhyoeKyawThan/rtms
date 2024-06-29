@@ -23,7 +23,11 @@
 
 <body class="p-9 bg-sky-600">
     <div class="flex flex-row h-full rounded-9 bg-sky-100 rounded-3xl overflow-hidden shadow-xl">
+<<<<<<< HEAD
         <div id="important" class="w-1/2 h-full border-r-2 flex flex-col bg-white p-5">
+=======
+        <div id="important" class="w-2/2 h-full border-r-2 flex flex-col bg-white p-5">
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             <div class="flex flex-row justify-center w-40 h-40 mb-0">
                 <img src="/assets/images/logo.jpg" alt="" sizes="" srcset="">
             </div>

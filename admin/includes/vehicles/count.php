@@ -3,7 +3,11 @@ include(__DIR__."/../../model/db.php");
 function get_count($vehicle_type): int{
     $db = new DB();
     if($db->is_connected()){
+<<<<<<< HEAD
         $sql = "SELECT COUNT(*) FROM vehicle_license WHERE vehicle_type= ? ";
+=======
+        $sql = "SELECT COUNT(*) FROM vehicle_license WHERE vehicle_type= ? AND YEAR(register_date)=YEAR(CURRENT_TIMESTAMP)";
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
         // get connection
         $connect = $db->get_connection();
         if($connect){

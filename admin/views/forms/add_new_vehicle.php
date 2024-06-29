@@ -85,9 +85,20 @@
             <div class="mb-2">
                 <label class="block font-bold" for="exp-date">ကုန်ဆုံးရက် *</label>
                 <input type="date" class="border mt-3 border-slate-300 rounded-xl p-2 ml-5 w-full" name="exp-date"
+<<<<<<< HEAD
                     value="<?php
                     $date = new DateTime($data['exp_date']);
                     echo $date->format('Y-m-d') ?>" id="exp-date">
+=======
+                    value="" id="exp-date">
+            </div>
+            <div class="mb-2">
+                <label class="block font-bold" for="register-date">Register Date *</label>
+                <input type="date" class="border mt-3 border-slate-300 rounded-xl p-2 ml-5 w-full" name="register-date"
+                    value="<?php
+                    $date = new DateTime();
+                    echo $date->format('Y-m-d') ?>" id="register-date">
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             </div>
             <div class="flex justify-end">
                 <div>

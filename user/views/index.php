@@ -3,7 +3,11 @@
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 // Include database connection
+<<<<<<< HEAD
 include(__DIR__."/../model/db.php");
+=======
+include (__DIR__ . "/../model/db.php");
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
 $contact = file_get_contents("http://localhost:8081/assets/js/contact.json"); // Decode JSON as associative array
 
 $db = new DB();
@@ -15,7 +19,11 @@ $db = new DB();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<<<<<<< HEAD
      <script src="/assets/js/tailwind.js"></script>
+=======
+    <script src="/assets/js/tailwind.js"></script>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <style>
         * {
@@ -42,6 +50,7 @@ $db = new DB();
             background-repeat: no-repeat;
             background-size: cover;
         }
+<<<<<<< HEAD
         .bgroundcolor{
         background-color: mediumblue;
         color: whitesmoke;
@@ -74,6 +83,43 @@ $db = new DB();
     } */
 
     
+=======
+
+        .bgroundcolor {
+            background-color: mediumblue;
+            color: whitesmoke;
+        }
+
+        .nav {
+            background-color: rgb(245, 177, 5);
+
+        }
+
+        .nav-color {
+            color: black;
+        }
+
+        .absolute-top {
+            position: absolute;
+            top: 60px;
+        }
+
+        .nav-style {
+            width: fit-content;
+            padding: 5px 20px 5px 20px;
+            font-size: 0.8em;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            border-radius: 30px;
+        }
+
+        /* .nav-size{
+        height: 50px;
+
+    } */
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     </style>
 </head>
 
@@ -103,6 +149,7 @@ $db = new DB();
             <li class=" nav-style md:p-5 p-2 font-bold  text-black cursor-pointer md:hover:bg-black hover:text-white md:text-sm "
                 id="home-tab" onclick="showPage('home')">ပင်မစာမျက်နှာ</li>
             <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer z-40 md:hover:bg-black hover:text-white md:text-sm md:w-auto"
+<<<<<<< HEAD
                 onclick="openSubNav('vehicle_license_sub')">
                 မော်တော်ယာဉ်မှတ်ပုံတင်ခြင်း
                 <ul class="w-8/9 bg-sky-200 m-auto hidden md:absolute md:top-14 md:w-fit md:bg-sky-600" id="vehicle_license_sub">
@@ -111,12 +158,27 @@ $db = new DB();
                         <a href="/home?p=vehicle_license_requirement" class="block text-left">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းတိုးရန်လိုအပ်ချက်များ</a></li>
                     <li class="p-2 bg-yellow-200  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="check_vehicle-tab"><a href="/home?p=check_vehicle" class="block text-left">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန် </a></li>
+=======
+                id="sub_parent1" onclick="openSubNav('vehicle_license_sub', 'sub_parent1')">
+                မော်တော်ယာဉ်မှတ်ပုံတင်ခြင်း
+                <ul class="w-8/9 bg-sky-200 m-auto hidden md:absolute md:top-14 md:w-fit md:bg-sky-600"
+                    id="vehicle_license_sub">
+                    <li class="p-2 bg-yellow-100  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
+                        id="vehicle_license_requirement-tab">
+                        <a href="/home?p=vehicle_license_requirement"
+                            class="block text-left">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းတိုးရန်လိုအပ်ချက်များ</a>
+                    </li>
+                    <li class="p-2 bg-yellow-200  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
+                        id="check_vehicle-tab"><a href="/home?p=check_vehicle"
+                            class="block text-left">မော်တော်ယာဉ်လိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန် </a></li>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                     <li class="p-2 bg-yellow-300  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="page1-tab"><a href="/home?p=page1" class="block text-left">နယ်ဝင်/နယ်ထွက်</a></li>
                     <li class="p-2 bg-yellow-400  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="page2-tab"><a href="/home?p=page2" class="block text-left">အပြောင်းအလဲများ</a></li>
                     <li class="p-2 bg-yellow-500  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="page3-tab"><a href="/home?p=page3" class="block text-left">
+<<<<<<< HEAD
                         မော်တော်ယာဉ်မှတ်ပုံတင်စာအုပ်ပျောက်လျှောက်ထားရန်</a></li>
                     <li class="p-2 bg-yellow-600  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="page4-tab"><a href="/home?p=page4" class="block text-left">Wheel Tax ပျောက်လျှောက်ထားရန်</a></li>
@@ -124,6 +186,16 @@ $db = new DB();
             </li>
             <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer md:hover:bg-black hover:text-white z-40 md:text-sm md:w-auto"
                 id="driving-tab" onclick="openSubNav('driving_sub')">
+=======
+                            မော်တော်ယာဉ်မှတ်ပုံတင်စာအုပ်ပျောက်လျှောက်ထားရန်</a></li>
+                    <li class="p-2 bg-yellow-600  text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
+                        id="page4-tab"><a href="/home?p=page4" class="block text-left">Wheel Tax ပျောက်လျှောက်ထားရန်</a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer md:hover:bg-black hover:text-white z-40 md:text-sm md:w-auto"
+                id="driving-tab" onclick="openSubNav('driving_sub', 'driving-tab')">
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                 ယာဉ်မောင်းလိုင်စင်
                 <ul class="w-8/9 bg-sky-200 m-auto hidden absolute-top md:w-fit md:bg-sky-600" id="driving_sub">
                     <li class="p-2 bg-yellow-100 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
@@ -140,28 +212,48 @@ $db = new DB();
                     </li>
                     <li class="p-2 bg-yellow-300 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="driving_change_cost-tab">
+<<<<<<< HEAD
                         <a href="/home?p=driving_change_cost" class="block text-left">ယာဉ်မောင်းလိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန်</a>
                     </li>
                    
+=======
+                        <a href="/home?p=driving_change_cost"
+                            class="block text-left">ယာဉ်မောင်းလိုင်စင်သက်တမ်းလက်ကျန်စစ်ဆေးရန်</a>
+                    </li>
+
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                     <li class="p-2 bg-yellow-400 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="p2-tab">
                         <a href="/home?p=p2" class="block text-left">နယ်ဝင်/နယ်ထွက်</a>
                     </li>
                     <li class="p-2 bg-yellow-500 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="p3-tab">
+<<<<<<< HEAD
                         <a href="/home?p=p3" class="block text-left">ယာဉ်မောင်းလိုင်စင်အမျိုးအစားအလိုက်ကောက်ခံမည့်နှုန်းထားများဇယား</a>
+=======
+                        <a href="/home?p=p3"
+                            class="block text-left">ယာဉ်မောင်းလိုင်စင်အမျိုးအစားအလိုက်ကောက်ခံမည့်နှုန်းထားများဇယား</a>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                     </li>
                     <li class="p-2 bg-yellow-600 text-sm pt-2 pb-2 hover:bg-amber-600 hover:text-slate-50 md:text-black"
                         id="p4-tab">
                         <a href="/home?p=p4" class="block text-left">
+<<<<<<< HEAD
 ယာဉ်မောင်းလိုင်စင်အပျောက်လျှောက်ထားရန်လိုအပ်သည်များ</a>
+=======
+                            ယာဉ်မောင်းလိုင်စင်အပျောက်လျှောက်ထားရန်လိုအပ်သည်များ</a>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
                     </li>
                 </ul>
 
             </li>
             <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer md:hover:bg-black hover:text-white md:text-sm md:w-auto"
                 id="history-tab" onclick="showPage('history')">ဌာနသမိုင်းကြောင်း</li>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
             <!-- vehicles -->
             <li class=" nav-style md:p-5 p-2 font-bold text-black cursor-pointer md:hover:bg-black hover:text-white md:text-sm md:w-auto"
                 id="news-tab" onclick="showPage('news')">သတင်းများ</li>
@@ -192,8 +284,13 @@ $db = new DB();
     <?php
     require __DIR__ . "/pages/home.php";
     // home
+<<<<<<< HEAD
     require __DIR__ .'/pages/vehicle_license_requirement.php';
     require __DIR__ ."/pages/check_vehicle_license.php";
+=======
+    require __DIR__ . '/pages/vehicle_license_requirement.php';
+    require __DIR__ . "/pages/check_vehicle_license.php";
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     // vehicle
     require __DIR__ . "/pages/news.php";
     // news
@@ -203,6 +300,7 @@ $db = new DB();
     // driving license
     require __DIR__ . "/pages/reviews.php";
     // reviews
+<<<<<<< HEAD
 
     require __DIR__ . "/pages/profile.php";
     // profile
@@ -223,10 +321,36 @@ $db = new DB();
     require __DIR__."/pages/p4.php";
     // history
     require __DIR__."/pages/history.php";
+=======
+    
+    require __DIR__ . "/pages/profile.php";
+    // profile
+    
+    require __DIR__ . "/pages/contact.php";
+    // contact
+    require __DIR__ . "/pages/qa.php";
+    // qa
+    require __DIR__ . "/pages/page1.php";
+    require __DIR__ . "/pages/page2.php";
+    require __DIR__ . "/pages/page3.php";
+    require __DIR__ . "/pages/page4.php";
+
+    // driving
+    require __DIR__ . "/pages/p1.php";
+    require __DIR__ . "/pages/p2.php";
+    require __DIR__ . "/pages/p3.php";
+    require __DIR__ . "/pages/p4.php";
+    // history
+    require __DIR__ . "/pages/history.php";
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
     ?>
     <!-- displays -->
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/control_pages.js"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> d9eecb5 ([add] date filter in vehicle and table showing in dashboard)
